@@ -14,12 +14,12 @@
                     </a>
                 </li>
                 <li v-if="theme.nav.rss">
-                    <a :href="theme.nav.rss">
+                    <a :href="theme.nav.rss" aria-label="Link to the RSS Feed">
                         <RSSFeed />
                     </a>
                 </li>
                 <li v-if="theme.nav.git">
-                    <a :href="theme.nav.git">
+                    <a :href="theme.nav.git" aria-label="Link to the source code">
                         <GitAlt />
                     </a>
                 </li>
