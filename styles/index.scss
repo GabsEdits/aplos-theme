@@ -1,6 +1,6 @@
 /*
  * Aplos version 1.0.0 (https://aplos.gxbs.me/)
- * Copyright 2023 Gabriel Cozma/Gabs
+ * Copyright 2023-2024 Gabriel Cozma/Gabs
  * Licensed under MIT (https://github.com/GabsEdits/aplos/src/branch/main/LICENSE)
  
  * Based on Vitepress (https://vitepress.dev) & Duckquill (https://daudix.codeberg.page/duckquill)
@@ -14,7 +14,7 @@
 
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1, "ss02" 1; /* fix for Chrome */
+  font-feature-settings: "liga" 1, "calt" 1, "cv05" 1; /* fix for Chrome */
 }
 
 @supports (font-variation-settings: normal) {
