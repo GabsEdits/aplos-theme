@@ -14,8 +14,8 @@ onMounted(() => {
 
 <template>
     <footer>
-        <p v-if="theme.footer.madeby.show"> Made with ❤️ by <a :href="theme.footer.madeby.link" id="author">{{
-            theme.footer.madeby.name }}</a></p>
+        <p v-if="theme.footer.madeby.show"> Made with ❤️ by <a :href="theme.footer.madeby.link" id="author"><mark>{{
+            theme.footer.madeby.name }}</mark></a></p>
         <p id="copyright" v-if="theme.footer.copyright">&copy; <span v-if="theme.footer.startYear">{{ theme.footer.startYear }} -</span> {{ currentYear }} {{ theme.author }}. All rights
             reserved. </p>
         <p id="powered" v-if="theme.footer.poweredBy"> Powered by <a href="https://vitepress.dev/">VitePress</a> and <a

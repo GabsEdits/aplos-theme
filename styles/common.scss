@@ -274,3 +274,13 @@ ol {
   list-style: decimal;
   margin: 10px 0px 10px 50px;
 }
+
+a mark {
+  text-decoration: underline;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+a mark:hover {
+  transform: scale(1.2);
+}
