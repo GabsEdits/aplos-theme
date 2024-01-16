@@ -126,6 +126,13 @@ figcaption {
   color: var(--color-text-secondary);
   font-size: 0.8rem;
 }
+
+small {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+}
+
 main a {
   color: var(--color-accent);
   text-decoration: underline;
