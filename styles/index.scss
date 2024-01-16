@@ -97,12 +97,18 @@ nav ul li a {
   font-size: 14px;
   letter-spacing: -0.72px;
   margin: 0 5px;
+  transform: scale(1);
   font-size: 14px;
-  transition: color 0.7s ease;
+  transition: color 0.7s ease, transform 100ms ease;
 }
 
 nav ul li a:hover {
   color: var(--color-accent);
+}
+
+nav ul li a:active {
+  color: var(--color-accent);
+  transform: scale(0.9);
 }
 
 nav ul li a.active {
@@ -115,6 +121,16 @@ nav h1 {
   font-weight: 800;
   color: var(--color-text);
   margin: 10px 0;
+  transform: scale(1);
+  transition: transform 100ms ease text-decoration 0.4s ease;
+}
+
+nav h1:hover {
+  text-decoration: underline 1.2px solid var(--color-accent);
+}
+
+nav h1:active {
+  transform: scale(0.9);
 }
 
 .h1-nav {
