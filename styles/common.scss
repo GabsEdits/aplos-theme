@@ -128,9 +128,8 @@ figcaption {
 }
 
 small {
-  display: block;
+  display: inline-block;
   color: var(--color-text-secondary);
-  font-size: 0.8rem;
 }
 
 main a {
