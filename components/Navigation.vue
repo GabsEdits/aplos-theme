@@ -1,5 +1,5 @@
 <template>
-      <header>
+    <header>
         <nav>
             <ul>
                 <li class="h1-nav">
@@ -8,18 +8,17 @@
                     </a>
                 </li>
                 <li v-for="(navItem, index) in navigation" :key="index">
-                    <a :href="navItem.link" :class="{ 'active': isActive(navItem.link) }"
-                        @click="setActive(navItem.link)">
+                    <a :href="navItem.link" :class="{ 'active': isActive(navItem.link) }" @click="setActive(navItem.link)">
                         {{ navItem.text }}
                     </a>
                 </li>
                 <li v-if="theme.nav.rss">
-                    <a :href="theme.nav.rss" aria-label="Link to the RSS Feed">
+                    <a target="_blank" :href="theme.nav.rss" aria-label="Link to the RSS Feed">
                         <RSSFeed />
                     </a>
                 </li>
                 <li v-if="theme.nav.git">
-                    <a :href="theme.nav.git" aria-label="Link to the source code">
+                    <a target="_blank" :href="theme.nav.git" aria-label="Link to the source code">
                         <GitAlt />
                     </a>
                 </li>
