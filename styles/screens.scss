@@ -1,64 +1,65 @@
 @media screen and (max-width: 1414px) {
-    main {
-      margin-top: 150px  !important;
-      margin-bottom: 150px !important;
-      width: 85vw !important;
-    }
-    nav {
-      padding: 5px 20px !important;
-    }
-    nav h1,
-    nav ul li a {
+  main {
+    margin-top: 150px !important;
+    margin-bottom: 150px !important;
+    width: 85vw !important;
+  }
+  nav {
+    padding: 5px 20px !important;
+
+    h1,
+    ul li a {
       font-size: 16px !important;
     }
-  
-    nav ul li a {
-      margin: 0 10px;
+
+    ul li a {
+      margin: 0 10px !important;
     }
-  
-    nav .fa-brands {
+
+    .fa-brands {
       font-size: 16px !important;
     }
-  
-    code {
-      padding: 3px 10px !important;
-      margin-top: 15px;
-      line-height: 1.2;
-    }
-
-    .danger,
-    .warning,
-    .tip,
-    .details,
-    .info {
-      width: 100% !important;
-    }
-
-    .lang {
-      display: none;
-    }
   }
-  
-  @media screen and (min-width: 1414px) and (max-width: 1902px) {
-    main {
-      margin: 7% 20%;
-    }
+
+  code {
+    padding: 3px 10px !important;
+    margin-top: 15px;
+    line-height: 1.2;
   }
-  
-  /* For printing */
 
-  @media print {
-    main {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100% !important;
-    }
-
-    nav {
-      display: none !important;
-    }
-
-    .lang {
-      display: none !important;
-    }
+  .danger,
+  .warning,
+  .tip,
+  .details,
+  .info {
+    width: 100% !important;
   }
+
+  .lang {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1414px) and (max-width: 1902px) {
+  main {
+    margin: 7% 20%;
+  }
+}
+
+/* For printing */
+
+@media print {
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  nav {
+    display: none !important;
+  }
+
+  .lang {
+    display: none !important;
+  }
+}

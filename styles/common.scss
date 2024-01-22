@@ -80,16 +80,16 @@ blockquote {
   margin: 0;
   width: max-content;
   max-width: 97%;
-}
 
-blockquote blockquote {
-  margin: 5px 0;
-  padding: 5px 10px;
-}
+  blockquote {
+    margin: 5px 0;
+    padding: 5px 10px;
+  }
 
-blockquote p {
-  color: var(--color-text-secondary);
-  margin: 0;
+  p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
 }
 
 img,
@@ -97,16 +97,14 @@ video {
   border-radius: 10px;
   margin: 10px 0;
   width: 100%;
-  transition: transform 0.4s, border-radius 0.4s,
-    border 1.5s ease;
-}
+  transition: transform 0.4s, border-radius 0.4s, border 1.5s ease;
 
-img:hover,
-video:hover {
-  transform: scale(1.1);
-  border: var(--color-border) 2px solid;
-  border-radius: 20px;
-  cursor: zoom-in;
+  &:hover {
+    transform: scale(1.1);
+    border: var(--color-border) 2px solid;
+    border-radius: 20px;
+    cursor: zoom-in;
+  }
 }
 
 video:hover {
@@ -119,7 +117,7 @@ img:active {
 }
 
 figcaption {
-  margin-top: -.5rem;
+  margin-top: -0.5rem;
   margin-bottom: 2rem;
   display: block;
   text-align: center;
@@ -170,14 +168,14 @@ kbd {
   padding: 3px;
   font-size: 14px;
   cursor: pointer;
-}
 
-kbd:active {
-  border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-border);
-  border-left: 2px solid var(--color-border);
-  padding-bottom: 4px;
-  padding-left: 4px;
+  &:active {
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-border);
+    border-left: 2px solid var(--color-border);
+    padding-bottom: 4px;
+    padding-left: 4px;
+  }
 }
 
 time {
@@ -190,31 +188,31 @@ time {
   padding: 3px;
   font-size: 14px;
   cursor: pointer;
-}
 
-time span {
-  display: inline-block;
-  animation: blink .7s infinite alternate;
-}
-
-@keyframes blink {
-  from {
-    opacity: 1;
+  span {
+    display: inline-block;
+    animation: blink 0.7s infinite alternate;
   }
-  to {
-    opacity: 0.5;
+
+  @keyframes blink {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
   }
-}
 
-time:active span {
-  animation: none;
-}
+  &:active {
+    border-bottom: 1px solid var(--color-border);
+    border-top: 2px solid var(--color-border);
+    font-weight: 800;
+    padding-top: 4px;
 
-time:active {
-  border-bottom: 1px solid var(--color-border);
-  border-top: 2px solid var(--color-border);
-  font-weight: 800;
-  padding-top: 4px;
+    span {
+      animation: none;
+    }
+  }
 }
 
 mark {
@@ -231,31 +229,31 @@ table {
   overflow: hidden;
   table-layout: fixed;
   width: 100%;
-}
 
-table th {
-  background-color: var(--color-background-mute);
-  color: var(--color-accent);
-  font-weight: 700;
-  padding: 10px 20px;
-  text-align: center;
-}
+  th {
+    background-color: var(--color-background-mute);
+    color: var(--color-accent);
+    font-weight: 700;
+    padding: 10px 20px;
+    text-align: center;
+  }
 
-table td {
-  color: var(--color-text);
-  padding: 10px 20px;
-}
+  td {
+    color: var(--color-text);
+    padding: 10px 20px;
+  }
 
-table tr {
-  background-color: var(--color-background);
-}
+  tr {
+    background-color: var(--color-background);
 
-table tr:nth-child(2n) {
-  background-color: var(--color-background-second);
-}
+    &:nth-child(2n) {
+      background-color: var(--color-background-second);
+    }
 
-table tr:first-child {
-  border-bottom: 0px solid var(--color-border);
+    &:first-child {
+      border-bottom: 0px solid var(--color-border);
+    }
+  }
 }
 
 /* Others */
@@ -269,17 +267,17 @@ table tr:first-child {
   color: #291d00f1;
   width: 100%;
   text-align: center;
-}
 
-#coming-soon h1 {
-  font-size: 2em;
-  margin-top: 0 !important;
-  font-weight: 800;
-  margin-bottom: 0 !important;
-}
+  h1 {
+    font-size: 2em;
+    margin-top: 0 !important;
+    font-weight: 800;
+    margin-bottom: 0 !important;
+  }
 
-#coming-soon p {
-  margin-top: 0 !important;
+  p {
+    margin-top: 0 !important;
+  }  
 }
 
 #NotFound {
@@ -291,39 +289,42 @@ table tr:first-child {
   color: var(--color-text-secondary);
   width: 100%;
   text-align: center;
+
+  h1 {
+    font-size: 2em;
+    margin-top: 0 !important;
+    font-weight: 800;
+    margin-bottom: 0 !important;
+  }
+
+  span {
+    font-size: 7em;
+    font-weight: 800;
+    letter-spacing: -12.2px;
+    line-height: -2px;
+    color: var(--color-text);
+  }
 }
 
-#NotFound h1 {
-  font-size: 2em;
-  margin-top: 0 !important;
-  font-weight: 800;
-  margin-bottom: 0 !important;
-}
-
-#NotFound span {
-  font-size: 7em;
-  font-weight: 800;
-  letter-spacing: -12.2px;
-  line-height: -2px;
-  color: var(--color-text);
+ul,
+ol {
+  margin: 10px 0px 10px 50px;
 }
 
 ul {
   list-style: disc;
-  margin: 10px 0px 10px 50px;
 }
 
 ol {
   list-style: decimal;
-  margin: 10px 0px 10px 50px;
 }
 
 a mark {
   text-decoration: underline;
   display: inline-block;
   transition: transform 0.3s ease;
-}
 
-a mark:hover {
-  transform: scale(1.2);
+  &:hover {
+    transform: scale(1.2);
+  }
 }
