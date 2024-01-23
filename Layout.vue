@@ -15,10 +15,10 @@ const { site, frontmatter, page, theme } = useData()
       <h1>{{ site.title }}</h1>
       <Content />
     </div>
+    <NotFound v-if="page.isNotFound" />
     <div v-else>
       <Content />
     </div>
-    <NotFound v-if="page.isNotFound" />
   </main>
   <SiteFooter />
 </template>
