@@ -19,7 +19,7 @@
                 </li>
                 <li v-if="theme.nav.git">
                     <a target="_blank" :href="theme.nav.git" aria-label="Link to the source code">
-                        <GitAlt />
+                        <SourceCode />
                     </a>
                 </li>
             </ul>
@@ -30,7 +30,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
-import GitAlt from '../icons/GitAlt.vue';
+import SourceCode from '../icons/SourceCode.vue';
 import RSSFeed from '../icons/RSSFeed.vue';
 
 const { site, theme } = useData();
