@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header v-if="theme.nav.show !== false">
         <nav>
             <ul>
                 <li class="h1-nav">
