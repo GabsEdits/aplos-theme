@@ -13,7 +13,6 @@ const { site, frontmatter, page, theme } = useData()
   <main>
     <div v-if="frontmatter.home">
       <h1>{{ site.title }}</h1>
-      <Content />
     </div>
     <NotFound v-if="page.isNotFound" />
     <div v-else>
