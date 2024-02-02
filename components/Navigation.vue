@@ -4,7 +4,7 @@
             <ul>
                 <li class="h1-nav">
                     <a href="/" @click="setActive('/')">
-                        <h1>{{ site.title }}</h1>
+                        <span id="site-title">{{ site.title }}</span>
                     </a>
                 </li>
                 <li v-for="(navItem, index) in navigation" :key="index">
