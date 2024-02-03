@@ -12,6 +12,7 @@ $bg-color-l: color.scale(
   $lightness: 90%,
   $saturation: -75%
 ) !default;
+
 $bg-color-d: color.scale(
   $color-accent,
   $lightness: -85%,
@@ -25,7 +26,7 @@ $bg-color-s-l: color.scale($color-accent, $lightness: 75%) !default;
 $bg-color-s-d: color.scale(
   $color-accent,
   $saturation: -80%,
-  $lightness: -80%
+  $lightness: -70%
 ) !default;
 
 $bg-color-m-l: color.scale($bg-color-s-l, $lightness: -5%) !default;
