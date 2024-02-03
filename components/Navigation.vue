@@ -2,9 +2,9 @@
     <header v-if="theme.nav.show !== false">
         <nav>
             <ul>
-                <li class="h1-nav">
+                <li id="title">
                     <a href="/" @click="setActive('/')">
-                        <span id="site-title">{{ site.title }}</span>
+                       {{ site.title }}
                     </a>
                 </li>
                 <li v-for="(navItem, index) in navigation" :key="index">
