@@ -49,6 +49,22 @@ main {
   background-color: var(--color-accent);
 }
 
+:target {
+  scroll-margin-top: 15vh;
+  animation: highlight-in-out 800ms;
+  animation-delay: .4s;
+  animation: 800ms 1s highlight-in-out;
+
+  @keyframes highlight-in-out {
+    50% {
+      color: var(--color-accent);
+      font-weight: bolder;
+      letter-spacing: 0.25rem;
+      font-style: italic;
+    }
+  }
+}
+
 html {
   scrollbar-color: var(--color-accent) rgba(0, 0, 0, 0);
   accent-color: var(--color-accent);
@@ -221,4 +237,8 @@ button.copy {
 .mono-emoji {
   font-family: "Noto Emoji";
   color: var(--color-accent);
+}
+
+.header-anchor {
+  display: none; // I will hide it for now
 }
