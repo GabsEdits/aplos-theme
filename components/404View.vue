@@ -1,11 +1,14 @@
 <template>
-    <main>
-        <section id="NotFound">
-            <span class="glitch" data-text="404">404</span>
-            <h1>Not Found!</h1>
-            <p>Hmm, Sorry... The page you are looking for could not be found, maybe something went wrong?</p>
-        </section>
-    </main>
+  <main>
+    <section id="NotFound">
+      <span class="glitch" data-text="404">404</span>
+      <h1>Not Found!</h1>
+      <p>
+        Hmm, Sorry... The page you are looking for could not be found, maybe
+        something went wrong?
+      </p>
+    </section>
+  </main>
 </template>
 
 <style lang="scss">
