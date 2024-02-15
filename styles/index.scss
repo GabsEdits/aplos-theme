@@ -8,7 +8,7 @@
 
 @import "../../custom.scss";
 @import "common.scss";
-@import "screens.scss";
+@import "medias.scss";
 @import "cards.scss";
 @import "color.scss";
 
@@ -235,11 +235,6 @@ button.copy {
   background-size: 20px;
   background-repeat: no-repeat;
   transition: border-color 0.25s, background-color 0.25s, opacity 0.25s;
-}
-
-.mono-emoji {
-  font-family: "Noto Emoji";
-  color: var(--color-accent);
 }
 
 .header-anchor {
