@@ -4,7 +4,7 @@ Aplós, but just the theme files. For Git Submodule.
 </div>
 
 > [!IMPORTANT]
-As I said above, this repo is just for these theme files for Git Submodule, for the actual Aplós Project check [GabsEdits/aplos](https://github.com/GabsEdits/aplos)
+As I said above, this repo is just for these theme files for Git Submodule. For the actual Aplós Project check [GabsEdits/aplos](https://github.com/GabsEdits/aplos)
 
 ## Usage
 First, Init the Submodules:
