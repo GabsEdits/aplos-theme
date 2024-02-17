@@ -32,6 +32,9 @@ $bg-color-s-d: color.scale(
 $bg-color-m-l: color.scale($bg-color-s-l, $lightness: -5%) !default;
 $bg-color-m-d: color.scale($bg-color-s-d, $lightness: 5%) !default;
 
+$bg-color-code-l: color.scale($bg-color-l, $lightness: -5%) !default;
+$bg-color-code-d: mix($bg-color-d, $bg-color-s-d, 80%);
+
 $text-color-secondary-l: color.scale(
   $bg-color-l,
   $lightness: -80%,
@@ -39,7 +42,7 @@ $text-color-secondary-l: color.scale(
 ) !default;
 $text-color-secondary-d: color.scale(
   $bg-color-l,
-  $alpha: -25%,
+  $alpha: -40%,
   $saturation: -90%
 ) !default;
 
@@ -52,6 +55,7 @@ $text-color-secondary-d: color.scale(
   --color-background: #{$bg-color-l};
   --color-background-second: #{$bg-color-s-l};
   --color-background-mute: #{$bg-color-m-l};
+  --color-background-code: #{$bg-color-code-l};
   --color-header: #{$nav-bg-l};
   --color-text: #{color.scale($bg-color-l, $lightness: -90%)};
 }
@@ -62,6 +66,7 @@ $text-color-secondary-d: color.scale(
     --color-background: #{$bg-color-d};
     --color-background-second: #{$bg-color-s-d};
     --color-background-mute: #{$bg-color-m-d};
+    --color-background-code: #{$bg-color-code-d};
     --color-header: #{$nav-bg-d};
     --color-text: #{color.scale($bg-color-l, $lightness: 85%)};
     --color-text-secondary: #{$text-color-secondary-d};

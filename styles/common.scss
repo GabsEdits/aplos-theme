@@ -12,7 +12,7 @@ p {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.125rem;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: 35px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -29,55 +29,45 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.075rem;
 }
 
-h4 {
-  font-size: 1.25rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
 pre {
   font-family: "Source Code Pro", monospace;
-  background-color: var(--color-background-second);
+  background-color: var(--color-background-code);
   border-right: var(--color-accent) 5px solid;
   padding: 0.625rem 1.25rem !important;
   overflow: auto;
   max-width: 100%;
   border-radius: 20px;
   margin: 1.25rem 0;
-}
 
-pre .highlighted {
-  background-color: var(--vp-code-line-highlight-color);
-  transition: background-color 0.5s;
-  margin: 0 -1.5rem;
-  padding: 0 1.5rem;
-  width: calc(99% + 2 * 1.5rem);
-  display: inline-block;
-}
+  code {
+    background-color: transparent;
+    color: var(--color-text);
+    border-radius: 0;
+    padding: 0;
+    border: 0px;
+  }
 
-pre .has-focused-lines .line:not(.has-focus) {
-  filter: blur(0.095rem);
-  opacity: 0.4;
-  transition: filter 0.35s, opacity 0.35s;
-}
+  .highlighted {
+    background-color: var(--vp-code-line-highlight-color);
+    transition: background-color 0.5s;
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem;
+    width: calc(99% + 2 * 1.5rem);
+    display: inline-block;
+  }
 
-.has-focused-lines .line:not(.has-focus) {
-  opacity: 0.7;
-  transition: filter 0.35s, opacity 0.35s;
-}
-
-.has-focused-lines .line:not(.has-focus) {
-  filter: blur(0);
-  opacity: 1;
+  .has-focused-lines .line:not(.has-focus) {
+    filter: blur(0.095rem);
+    opacity: 0.4;
+    transition: filter 0.35s, opacity 0.35s;
+  }
 }
 
 blockquote {
@@ -158,14 +148,6 @@ code {
   padding: 1px 6px;
   font-size: 14px;
   border: 1px solid var(--color-border);
-}
-
-pre code {
-  background-color: transparent;
-  color: var(--color-text);
-  border-radius: 0;
-  padding: 0;
-  border: 0px;
 }
 
 kbd {
