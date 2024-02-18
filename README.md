@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Aplós - Theme</h1>
-Aplós, but just the theme files. For Git Submodule.
+Aplós, but just the theme files, as a Git Submodule.
 </div>
 
 > [!IMPORTANT]
