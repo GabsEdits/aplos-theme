@@ -53,9 +53,9 @@ main {
 
 :target {
   scroll-margin-top: 15vh;
-  animation: highlight-in-out 800ms;
-  animation-delay: .4s;
-  animation: 800ms 1s highlight-in-out;
+  animation: highlight-in-out 800ms .4s;
+  color: var(--color-accent);
+  text-shadow: var(--color-background-second) 0 0 4px,var(--color-accent) 0 0 12px;
 
   @keyframes highlight-in-out {
     50% {
