@@ -5,6 +5,7 @@ import NotFound from './components/404View.vue';
 import SiteFooter from './components/Footer.vue';
 import Navigation from './components/Navigation.vue';
 import BlogHead from './components/BlogHead.vue';
+import BlogFooter from './components/BlogFooter.vue';
 
 const { site, frontmatter, page, theme } = useData()
 </script>
@@ -19,6 +20,7 @@ const { site, frontmatter, page, theme } = useData()
     <div v-if="frontmatter.layout == 'blog'">
       <BlogHead />
       <Content />
+      <BlogFooter />
     </div>
     <div v-else>
       <Content />
