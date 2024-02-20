@@ -15,7 +15,6 @@
         display: block;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: var(--base-shadow);
         color: var(--color-text-secondary);
         width: 100%;
         text-align: left;
