@@ -17,13 +17,13 @@
         border-radius: 10px;
         color: var(--color-text-secondary);
         width: 100%;
-        text-align: left;
+        text-align: center;
         text-decoration: none;
         transition: all 0.3s ease;
-        background-color: var(--color-background-second);
 
         &:hover {
             transform: translateY(-5px);
+            background-color: var(--color-background-second);
         }
 
         &:active {

@@ -7,7 +7,7 @@ import Navigation from './components/Navigation.vue';
 import BlogHead from './components/BlogHead.vue';
 import BlogFooter from './components/BlogFooter.vue';
 
-const { site, frontmatter, page, theme } = useData()
+const { site, frontmatter, page } = useData()
 </script>
 
 <template>
@@ -16,14 +16,15 @@ const { site, frontmatter, page, theme } = useData()
     <div v-if="frontmatter.home">
       <h1>{{ site.title }}</h1>
     </div>
-    <NotFound v-if="page.isNotFound" />
     <div v-if="frontmatter.layout == 'blog'">
       <BlogHead />
-      <Content />
-      <BlogFooter />
     </div>
+    <NotFound v-if="page.isNotFound" />
     <div v-else>
       <Content />
+    </div>
+    <div v-if="frontmatter.layout == 'blog'">
+      <BlogFooter />
     </div>
   </main>
   <SiteFooter />
