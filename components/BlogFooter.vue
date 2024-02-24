@@ -1,11 +1,26 @@
 <template>
     <section id="blog-footer">
         <hr />
+        <h2>Comments</h2>
+        <p>
+            If you have any questions or comments about this post, please feel free to leave a comment below.
+        </p>
+        <script src="https://giscus.app/client.js" :data-repo="theme.blog.data.repo" :data-repo-id="theme.blog.data.repo"
+            data-category="Blog Comments" :data-category-id="theme.blog.data.categoryid" data-mapping="url" data-strict="0"
+            data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
+            data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
+        </script>
         <a href="/blog/">
             <span>← Go back to the blog's home</span>
         </a>
     </section>
 </template>
+
+<script setup lang="ts">
+import { useData } from 'vitepress';
+
+const { theme } = useData();
+</script>
 
 <style lang="scss">
 #blog-footer {
