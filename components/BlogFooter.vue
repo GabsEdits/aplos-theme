@@ -54,6 +54,7 @@ document.getElementById("giscusContainer")?.appendChild(script);
         text-align: center;
         text-decoration: none;
         transition: all 0.3s ease;
+        margin-top: 30px;
 
         &:hover {
             transform: translateY(-5px);
