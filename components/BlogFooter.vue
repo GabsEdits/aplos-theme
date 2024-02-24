@@ -27,7 +27,7 @@ script.setAttribute("data-repo", theme.value.blog.data.repo);
   script.setAttribute("data-repo-id", theme.value.blog.data.repoid);
   script.setAttribute("data-category", "Blog Comments");
   script.setAttribute("data-category-id", theme.value.blog.data.categoryid);
-  script.setAttribute("data-mapping", "url");
+  script.setAttribute("data-mapping", "title");
   script.setAttribute("data-strict", "0");
   script.setAttribute("data-reactions-enabled", "1");
   script.setAttribute("data-emit-metadata", "0");
