@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useData } from "vitepress";
-const currentYear = new Date().getFullYear();
-
 const { theme } = useData();
 </script>
 
@@ -16,7 +14,7 @@ const { theme } = useData();
     <p id="copyright" v-if="theme.footer.copyright">
       &copy; {{ theme.author }},
       <span v-if="theme.footer.startYear">{{ theme.footer.startYear }}-</span
-      >{{ currentYear }}.
+      >{{ new Date().getFullYear() }}.
     </p>
     <p id="copyleft" v-if="theme.footer.copyleft?.show">
       &#127279; Licensed under the
