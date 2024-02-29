@@ -13,10 +13,10 @@
 
 <style lang="scss">
 #NotFound {
-    background-color: var(--color-background-second);
+    background-color: var(--color-background-mute) !important;
+    box-shadow: none !important;
     border-radius: 10px;
     padding: 30px 20px;
-    box-shadow: var(--base-shadow);
     margin-bottom: 20px;
     color: var(--color-text-secondary);
     width: 100%;
@@ -25,6 +25,7 @@
     h1 {
         font-size: 2em;
         margin-top: 0 !important;
+        color: var(--color-accent);
         font-weight: 800;
         margin-bottom: 0 !important;
     }

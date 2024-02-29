@@ -1,18 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
 import { useData } from "vitepress";
-const currentYear = ref<string>("");
+const currentYear = new Date().getFullYear();
 
 const { theme } = useData();
-
-onMounted(() => {
-  const now = new Date();
-  const options = { year: "numeric", timeZone: "Europe/Chisinau" };
-  currentYear.value = now.toLocaleDateString(
-    undefined,
-    options as Intl.DateTimeFormatOptions
-  );
-});
 </script>
 
 <template>
