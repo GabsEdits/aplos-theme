@@ -1,5 +1,6 @@
 <template>
     <div class="blog-posts">
+      <noscript><small>To use the filter you need JavaScript to be enabled.</small></noscript>
       <div class="filter-tags">
         <button @click="filterPosts('')">All</button>
         <button v-for="tag in uniqueTags" :key="tag" @click="filterPosts(tag)">#{{ tag }}</button>
