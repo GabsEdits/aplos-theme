@@ -20,34 +20,34 @@ const { theme } = useData();
 #simple-layout {
   margin-top: 6rem;
 
-    #file-an-issue {
-      background-color: transparent;
-      color: var(--color-accent);
+  #file-an-issue {
+    background-color: transparent;
+    color: var(--color-accent);
 
-      &:hover {
-        background-color: var(--color-accent);
-        color: var(--color-background-second);
-      }
-    }
-
-    .dialog-buttons a {
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      color: var(--color-accent);
-      background-color: var(--color-background-second);
-      transition: all 0.3s ease;
-
-      &:hover {
-        background-color: var(--color-background-mute);
-      }
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-background-second);
     }
   }
-  .dialog-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-top: 2rem;
+
+  .dialog-buttons a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--color-accent);
+    background-color: var(--color-background-second);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-background-mute);
+    }
+  }
+}
+.dialog-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 </style>
