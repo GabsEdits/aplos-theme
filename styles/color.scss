@@ -52,7 +52,7 @@ $text-color-secondary-d: color.scale(
 :root {
   --color-accent: #{$color-accent-l};
   --color-accent-alpha: #{$bg-color-accent-alpha-l};
-  --base-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.15);
+  --base-shadow: 0 0.625rem 2.125rem 0 rgba(0, 0, 0, 0.15);
   --color-text-secondary: #{$text-color-secondary-l};
   --color-border: #75757560;
 

@@ -2,10 +2,10 @@
 .danger,
 .info,
 .warning {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   width: 50%;
-  border-radius: 10px;
-  padding: 30px 20px;
+  border-radius: 0.625rem;
+  padding: 1.875rem 1.25rem;
 
   p {
     margin-bottom: 0 !important;
@@ -17,19 +17,19 @@
   font-size: 2em !important;
   margin-top: 0 !important;
   font-weight: 800;
-  margin-bottom: 10px !important;
+  margin-bottom: 0.625rem !important;
 }
 
 .danger .custom-block-title {
   font-size: 2em !important;
   margin-top: 0 !important;
   font-weight: 800;
-  margin-bottom: 10px !important;
+  margin-bottom: 0.625rem !important;
 }
 
 .details {
-  border-radius: 10px !important;
-  margin: 20px 0 !important;
+  border-radius: 0.625rem !important;
+  margin: 1.25rem 0 !important;
   width: 50%;
 
   summary {
@@ -43,7 +43,7 @@
   font-size: 2em !important;
   margin-top: 0 !important;
   font-weight: 800;
-  margin-bottom: 10px !important;
+  margin-bottom: 0.625rem !important;
 }
 
 .warning {
@@ -53,6 +53,6 @@
     font-size: 2em !important;
     margin-top: 0 !important;
     font-weight: 800;
-    margin-bottom: 10px !important;
+    margin-bottom: 0.625rem !important;
   }
 }
