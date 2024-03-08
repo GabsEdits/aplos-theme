@@ -15,6 +15,7 @@
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1, "cv05" 1;
+  scroll-behavior: smooth;
   /* fix for Chrome */
 }
 
@@ -37,6 +38,7 @@ body {
 
 main {
   width: 60vw;
+  scroll-behavior: smooth;
   margin-top: 7%;
   margin-bottom: 4%;
   font-size: 1rem;
@@ -71,9 +73,10 @@ main {
 html {
   scrollbar-color: var(--color-accent) rgba(0, 0, 0, 0);
   accent-color: var(--color-accent);
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
+header {
 nav {
   background-color: none;
   backdrop-filter: blur(10px);
@@ -130,6 +133,7 @@ nav {
       }
     }
   }
+}
 
   #title {
     margin-right: 2.1875rem;
@@ -218,6 +222,59 @@ footer {
 }
 
 /* Other */
+
+.table-of-contents {
+  display: none; // I will hide it for now
+  background-color: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  position: fixed;
+  top: 150px;
+  left: 10%;
+  border-radius: 1rem;
+  z-index: 9999;
+  padding: 0.625rem 1.5625rem !important;
+  text-align: left;
+
+  ul {
+    list-style-type: decimal;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 0 15px;
+    padding: 0;
+
+    li {
+      text-align: left;
+      a {
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.045rem;
+        margin: 0 0.3125rem;
+        transform: scale(1);
+        font-size: 14px;
+        transition: color 0.7s ease, transform 100ms ease;
+
+        &:hover {
+          color: var(--color-accent);
+        }
+
+        &:active {
+          color: var(--color-accent);
+          transform: scale(0.9);
+        }
+
+        &.active {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}
 
 button.copy {
   direction: ltr;

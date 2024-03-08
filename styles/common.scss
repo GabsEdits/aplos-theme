@@ -319,3 +319,12 @@ a mark {
     transform: scale(1.2);
   }
 }
+
+aside {
+  background-color: var(--color-background-second);
+  border-radius: 1rem;
+  float: right;
+  margin-inline-start: 1rem;
+  padding: 1rem;
+  width: 30%;
+}
