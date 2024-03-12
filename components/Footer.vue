@@ -5,6 +5,12 @@ const { theme } = useData();
 
 <template>
   <footer>
+    <a
+      style="margin: 16px; display: block;"
+      v-if="theme.footer.sourcecode?.show"
+      :href="theme.footer.sourcecode.link"
+      ><mark>Source Code</mark></a
+    >
     <p v-if="theme.footer.madeby.show">
       Made with ❤️ by
       <a :href="theme.footer.madeby.link" id="author"
