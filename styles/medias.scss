@@ -47,6 +47,19 @@
   }
 }
 
+@media screen and (max-width: 37.5rem){
+  ul, ol {
+    margin: 0 0 0 10px;
+  }
+
+  aside {
+    float: none;
+    width: 100%;
+    margin-inline-start: 0;
+  }
+}
+
+
 @media screen and (min-width: 88.375rem) and (max-width: 118.875rem) {
   main {
     margin: 7% 20%;
