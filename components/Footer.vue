@@ -18,7 +18,7 @@ const { theme } = useData();
       >
     </p>
     <p id="copyright" v-if="theme.footer.copyright">
-      &copy; {{ theme.author }},
+      &copy; <b>{{ theme.author }}</b>,
       <span v-if="theme.footer.startYear">{{ theme.footer.startYear }}-</span
       >{{ new Date().getFullYear() }}.
     </p>
@@ -29,9 +29,9 @@ const { theme } = useData();
       }}</a
       >.
     </p>
-    <p id="powered" v-if="theme.footer.poweredBy">
+    <small id="powered" v-if="theme.footer.poweredBy">
       Powered by <a href="https://vitepress.dev/">VitePress</a> and
       <a href="https://aplos.gxbs.me">Aplós</a>
-    </p>
+    </small>
   </footer>
 </template>
