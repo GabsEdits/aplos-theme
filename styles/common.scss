@@ -72,7 +72,7 @@ pre {
 
 blockquote {
   border-left: var(--color-accent) 0.3125rem solid;
-  border-radius: 0.5rem 3.125rem 3.125rem 0.5rem;
+  border-radius: 0.5rem 1.5rem 1.5rem 0.5rem;
   background-color: var(--color-background-second);
   padding: 0.625rem 1.1875rem;
   margin: 0;
@@ -133,6 +133,15 @@ main a {
   color: var(--color-accent);
   text-decoration: underline;
   font-weight: 700;
+  transition: text-decoration 0.3s ease transform 0.3s ease;
+
+  &:hover {
+    text-decoration: dotted underline;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 hr {
@@ -144,11 +153,10 @@ hr {
 code {
   font-family: "Source Code Pro", monospace;
   background-color: var(--color-background-second);
-  border-radius: 0.4375rem;
+  border-radius: 0.45rem;
   color: var(--color-accent);
-  padding: 0.0625rem 0.375rem;
-  font-size: 0.875rem;
-  border: 0.0625rem solid var(--color-border);
+  padding: .125rem .25rem;
+  font-size: 0.85rem;
 }
 
 kbd {
@@ -294,7 +302,7 @@ a mark {
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(10deg);
   }
 }
 
