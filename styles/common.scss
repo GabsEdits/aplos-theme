@@ -95,11 +95,11 @@ video {
   border-radius: 0.625rem;
   margin: 0.625rem 0;
   width: 100%;
-  transition: transform 0.4s, border-radius 0.4s, border 1.5s ease;
+  transition: transform 0.4s, border-radius 0.4s, box-shadow 1.5s ease;
 
   &:hover {
     transform: scale(1.1);
-    border: var(--color-border) 0.125rem solid;
+    box-shadow: var(--base-shadow);
     border-radius: 1.25rem;
     cursor: zoom-in;
   }
