@@ -18,7 +18,7 @@ const { theme } = useData();
 
 <style lang="scss">
 #simple-layout {
-  margin-top: 6rem;
+  margin-top: 3rem;
 
   #file-an-issue {
     background-color: transparent;
