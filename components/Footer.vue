@@ -6,7 +6,7 @@ const { theme } = useData();
 <template>
   <footer>
     <a
-      style="margin: 16px; display: block;"
+      style="margin: 16px; display: block"
       v-if="theme.footer.sourcecode?.show"
       :href="theme.footer.sourcecode.link"
       ><mark>Source Code</mark></a
@@ -17,9 +17,13 @@ const { theme } = useData();
         ><mark>{{ theme.footer.madeby.name }}</mark></a
       >
     </p>
-    <p id="copyright" v-if="theme.footer.copyright">
-      &copy; <b>{{ theme.author }}</b>,
-      <span v-if="theme.footer.startYear">{{ theme.footer.startYear }}-</span
+    <p
+      id="copyright"
+      v-if="theme.footer.copyright"
+      :title="'Last Updated At: ' + new Date().toLocaleString()"
+    >
+      &copy; <b>{{ theme.author }}</b
+      >, <span v-if="theme.footer.startYear">{{ theme.footer.startYear }}-</span
       >{{ new Date().getFullYear() }}.
     </p>
     <p id="copyleft" v-if="theme.footer.copyleft?.show">
