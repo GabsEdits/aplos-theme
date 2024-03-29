@@ -1,9 +1,9 @@
 /*
- * Aplos version 1.0.0 (https://aplos.gxbs.me/)
+ * Aplos (https://aplos.gxbs.me/)
  * Copyright 2023-2024 Gabriel Cozma/Gabs
  * Licensed under MIT (https://github.com/GabsEdits/aplos/src/branch/main/LICENSE)
  
- * Based on Vitepress (https://vitepress.dev) & inspired Duckquill (https://daudix.codeberg.page/duckquill)
+ * Based on VitePress (https://vitepress.dev) & inspired Duckquill (https://daudix.codeberg.page/duckquill)
 */
 
 @import "../../custom.scss";
@@ -71,69 +71,68 @@ main {
 }
 
 html {
-  scrollbar-color: var(--color-accent) rgba(0, 0, 0, 0);
   accent-color: var(--color-accent);
   scroll-behavior: smooth !important;
 }
 
 header {
-nav {
-  background-color: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  overflow: hidden;
-  position: fixed;
-  top: 3rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 2.5rem;
-  background-color: var(--color-header);
-  border: 0.4px solid var(--color-border);
-  z-index: 9999;
-  padding: 0.0625rem 1.5625rem;
-  text-align: center;
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  nav {
+    background-color: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2.5rem;
+    background-color: var(--color-header);
+    border: 0.4px solid var(--color-border);
+    z-index: 9999;
+    padding: 0.0625rem 1.5625rem;
+    text-align: center;
 
-    li {
-      display: inline-block;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-      a {
-        display: block;
-        text-align: center;
-        color: var(--color-text-secondary);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 14px;
-        letter-spacing: -0.045rem;
-        margin: 0 0.3125rem;
-        transform: scale(1);
-        font-size: 14px;
-        transition: color 0.7s ease, transform 100ms ease;
+      li {
+        display: inline-block;
 
-        &:hover {
-          color: var(--color-accent);
-        }
+        a {
+          display: block;
+          text-align: center;
+          color: var(--color-text-secondary);
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 14px;
+          letter-spacing: -0.045rem;
+          margin: 0 0.3125rem;
+          transform: scale(1);
+          font-size: 14px;
+          transition: color 0.7s ease, transform 100ms ease;
 
-        &:active {
-          color: var(--color-accent);
-          transform: scale(0.9);
-        }
+          &:hover {
+            color: var(--color-accent);
+          }
 
-        &.active {
-          color: var(--color-accent);
+          &:active {
+            color: var(--color-accent);
+            transform: scale(0.9);
+          }
+
+          &.active {
+            color: var(--color-accent);
+          }
         }
       }
     }
   }
-}
 
   #title {
     margin-right: 2.1875rem;
@@ -194,6 +193,7 @@ footer {
 
   p {
     margin: 0;
+
     &:first-child {
       margin-top: 10px;
     }
@@ -258,6 +258,7 @@ footer {
 
     li {
       text-align: left;
+
       a {
         display: block;
         text-align: left;
