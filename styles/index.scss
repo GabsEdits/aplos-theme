@@ -29,11 +29,20 @@
   }
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Inter, sans-serif;
   scroll-behavior: smooth;
   background-color: var(--color-background);
   color: var(--color-text);
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  font-synthesis: style;
+  text-rendering: optimizeLegibility;
 }
 
 main {
@@ -72,7 +81,7 @@ main {
 
 html {
   accent-color: var(--color-accent);
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -111,10 +120,9 @@ header {
           text-decoration: none;
           font-weight: 600;
           font-size: 14px;
-          letter-spacing: -0.045rem;
+          letter-spacing: -0.015rem;
           margin: 0 0.3125rem;
           transform: scale(1);
-          font-size: 14px;
           transition: color 0.7s ease, transform 100ms ease;
 
           &:hover {
@@ -140,7 +148,7 @@ header {
 
     * {
       font-size: 16px;
-      letter-spacing: -0.0625rem;
+      letter-spacing: -0.0325rem;
       font-weight: 800;
       color: var(--color-text);
       margin: 0.5rem 0.3125rem 0.5rem 0.3125rem;
@@ -160,6 +168,7 @@ header {
       content: "";
       position: absolute;
       height: 110%;
+      margin: 0;
       width: 0.0625rem;
       background-color: var(--color-border);
       top: 0;
@@ -235,7 +244,6 @@ footer {
 /* Other */
 
 .table-of-contents {
-  display: none; // I will hide it for now
   background-color: none;
   backdrop-filter: blur(0.625rem);
   -webkit-backdrop-filter: blur(0.625rem);
@@ -245,7 +253,7 @@ footer {
   left: 10%;
   border-radius: 1rem;
   z-index: 9999;
-  padding: 0.625rem 1.5625rem !important;
+  padding: 0.625rem 1.5625rem;
   text-align: left;
 
   ul {
@@ -311,4 +319,16 @@ button.copy {
 
 .header-anchor {
   display: none; // I will hide it for now
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
 }
