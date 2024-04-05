@@ -1,14 +1,12 @@
 <template>
   <div class="blog-posts">
-    <noscript
-      ><small
-        >To use the filter you need JavaScript to be enabled.</small
-      ></noscript
-    >
+    <noscript>
+      <small>To use the filter you need JavaScript to be enabled.</small>
+    </noscript>
     <div class="filter-tags">
-      <button @click="filterPosts('')">All</button>
+      <button @click="filterPosts('')" id="all-tags">All</button>
       <button v-for="tag in uniqueTags" :key="tag" @click="filterPosts(tag)">
-        #{{ tag }}
+        <span class="hashtag">#</span>{{ tag }}
       </button>
     </div>
     <div class="post-container">
@@ -19,8 +17,8 @@
         class="post"
       >
         <h3>{{ post.title }}</h3>
-        <p>{{ post.desc }}</p>
-        <p class="date">{{ formatDate(post.date) }}</p>
+        <p>{{ post.description }}</p>
+        <p class="date">{{ post.date }}</p>
         <div class="tags">
           <span v-if="typeof post.tags === 'string'" :key="post.tags"
             >#{{ post.tags }}</span
@@ -33,15 +31,18 @@
 </template>
 
 <script>
+import { data as posts } from "./posts.data.ts";
+
 export default {
   data() {
     return {
+      posts: posts,
       selectedTag: null,
     };
   },
   computed: {
     allTags() {
-      return this.$frontmatter.posts.reduce((tags, post) => {
+      return this.posts.reduce((tags, post) => {
         return tags.concat(Array.isArray(post.tags) ? post.tags : [post.tags]);
       }, []);
     },
@@ -51,8 +52,8 @@ export default {
     },
     filteredPosts() {
       return this.selectedTag === null
-        ? this.$frontmatter.posts
-        : this.$frontmatter.posts.filter((post) =>
+        ? this.posts
+        : this.posts.filter((post) =>
             Array.isArray(post.tags)
               ? post.tags.includes(this.selectedTag)
               : post.tags === this.selectedTag

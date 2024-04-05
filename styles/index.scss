@@ -331,5 +331,7 @@ select,
 summary,
 textarea {
   touch-action: manipulation;
+  font-family: inherit;
+  font-feature-settings: inherit;
   color: var(--color-text);
 }
