@@ -36,11 +36,33 @@ h3 {
   letter-spacing: -0.075rem;
 }
 
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  overflow-wrap: break-word;
+}
+
 pre {
   font-family: "Source Code Pro", monospace;
   background-color: var(--color-background-code);
   border-right: var(--color-accent) 0.3125rem solid;
-  padding: 0.625rem 1.25rem !important;
+  padding: 0.625rem 1.25rem;
   overflow: auto;
   max-width: 100%;
   border-radius: 1.25rem;
@@ -52,10 +74,31 @@ pre {
     border-radius: 0;
     padding: 0;
     border: 0;
+
+    span {
+      color: var(--shiki-light, inherit);
+
+      @media (prefers-color-scheme: dark) {
+        color: var(--shiki-dark, inherit);
+      }
+
+      .line .highlighted {
+        background-color: rgba(142, 150, 170, 0.14);
+
+        @media (prefers-color-scheme: dark) {
+          background-color: rgba(101, 117, 133, 0.16);
+        }
+      }
+    }
   }
 
   .highlighted {
-    background-color: var(--vp-code-line-highlight-color);
+    background-color: rgba(142, 150, 170, 0.14);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba(101, 117, 133, 0.16);
+    }
+
     transition: background-color 0.5s;
     margin: 0 -1.5rem;
     padding: 0 1.5rem;
@@ -155,7 +198,7 @@ code {
   background-color: var(--color-background-second);
   border-radius: 0.45rem;
   color: var(--color-accent);
-  padding: .125rem .25rem;
+  padding: 0.125rem 0.25rem;
   font-size: 0.85rem;
 }
 
@@ -164,6 +207,7 @@ kbd {
   border-radius: 0.3125rem;
   border: 0.0625rem solid var(--color-border);
   border-bottom: 0.125rem solid var(--color-border);
+  font-family: "Source Code Pro", monospace;
   padding: 0.1875rem;
   font-size: 0.875rem;
   cursor: pointer;
@@ -257,35 +301,9 @@ table {
 
 /* Others */
 
-#NotFound {
-  background-color: var(--color-background-second);
-  border-radius: 0.625rem;
-  padding: 1.875rem 1.25rem;
-  box-shadow: var(--base-shadow);
-  margin-bottom: 1.25rem;
-  color: var(--color-text-secondary);
-  width: 100%;
-  text-align: center;
-
-  h1 {
-    font-size: 2em;
-    margin-top: 0 !important;
-    font-weight: 800;
-    margin-bottom: 0 !important;
-  }
-
-  span {
-    font-size: 7em;
-    font-weight: 800;
-    letter-spacing: -0.7625rem;
-    line-height: -0.125rem;
-    color: var(--color-text);
-  }
-}
-
 ul,
 ol {
-  margin: 0.625rem 0 0.625rem 3.125rem;
+  margin: 0;
 }
 
 ul {
@@ -313,6 +331,14 @@ aside {
   margin-inline-start: 1rem;
   padding: 1rem;
   width: 30%;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  cursor: pointer;
 }
 
 abbr {
