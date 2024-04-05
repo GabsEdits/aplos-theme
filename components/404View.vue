@@ -4,16 +4,29 @@
       <span class="glitch" data-text="404">404</span>
       <h1>Not Found!</h1>
       <p>
-        Hmm, Sorry... The page you are looking for could not be found, maybe
-        something went wrong?
+        Oops! We couldn't find the page you're looking for. It seems like
+        something went wrong. It might not be our fault. If you believe it is,
+        please let us know by filing an issue.
       </p>
     </section>
+    <p class="dialog-buttons">
+      <a onclick="window.history.go(-1)">← Go Back</a>
+      <a id="file-an-issue" v-bind:href="theme.nav.git + '/issues/new'"
+        >File an issue</a
+      >
+    </p>
   </main>
 </template>
 
+<script setup lang="ts">
+import { useData } from "vitepress";
+
+const { theme } = useData();
+</script>
+
 <style lang="scss">
 #NotFound {
-  background-color: var(--color-background-mute) !important;
+  background-color: transparent !important;
   box-shadow: none !important;
   border-radius: 10px;
   padding: 30px 20px;
