@@ -78,6 +78,7 @@ onMounted(() => {
     margin: 0 0.2rem;
     text-align: center;
     text-decoration: none;
+    background-color: transparent;
     transition: all 0.3s ease;
 
     &:first-child {
