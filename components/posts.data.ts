@@ -15,7 +15,7 @@ export default createContentLoader("blog/posts/*.md", {
     return raw
       .map(({ frontmatter }) => ({
         title: frontmatter.title,
-        description: frontmatter.shortDescription,
+        description: frontmatter.description,
         tags: frontmatter.tags,
         date: formatDate(frontmatter.date),
       }))
