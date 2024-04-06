@@ -30,47 +30,36 @@
   </div>
 </template>
 
-<script>
-import { data as posts } from "./posts.data.ts";
+<script setup lang="ts">
+import { data as posts } from "./posts.data";
+import { ref, computed } from "vue";
 
-export default {
-  data() {
-    return {
-      posts: posts,
-      selectedTag: null,
-    };
-  },
-  computed: {
-    allTags() {
-      return this.posts.reduce((tags, post) => {
-        return tags.concat(Array.isArray(post.tags) ? post.tags : [post.tags]);
-      }, []);
-    },
-    uniqueTags() {
-      const tags = [...new Set(this.allTags)];
-      return tags.filter((tag) => tag !== "");
-    },
-    filteredPosts() {
-      return this.selectedTag === null
-        ? this.posts
-        : this.posts.filter((post) =>
-            Array.isArray(post.tags)
-              ? post.tags.includes(this.selectedTag)
-              : post.tags === this.selectedTag
-          );
-    },
-  },
-  methods: {
-    filterPosts(tag) {
-      this.selectedTag = tag === "" ? null : tag;
-    },
-    formatDate(dateString) {
-      const options = { day: "2-digit", month: "long", year: "numeric" };
-      const date = new Date(dateString);
-      return date.toLocaleDateString("en-GB", options);
-    },
-  },
-};
+const selectedTag = ref(null);
+
+const allTags = computed(() => {
+  return posts.reduce((tags, post) => {
+    return tags.concat(Array.isArray(post.tags) ? post.tags : [post.tags]);
+  }, []);
+});
+
+const uniqueTags = computed(() => {
+  const tags = [...new Set(allTags.value)];
+  return tags.filter((tag) => tag !== "");
+});
+
+const filteredPosts = computed(() => {
+  return selectedTag.value === null
+    ? posts
+    : posts.filter((post) =>
+        Array.isArray(post.tags)
+          ? post.tags.includes(selectedTag.value)
+          : post.tags === selectedTag.value
+      );
+});
+
+function filterPosts(tag: string) {
+  selectedTag.value = tag === "" ? null : tag;
+}
 </script>
 
 <style lang="scss">
@@ -125,6 +114,11 @@ export default {
 
 .filter-tags {
   margin-bottom: 20px;
+
+  #all-tags {
+    background-color: var(--color-accent-alpha);
+    color: var(--color-accent)
+  }
 
   button {
     margin-right: 10px;

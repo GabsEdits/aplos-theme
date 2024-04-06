@@ -62,10 +62,8 @@ $text-color-secondary-d: color.scale(
   --color-background-code: #{$bg-color-code-l};
   --color-header: #{$nav-bg-l};
   --color-text: #{color.scale($bg-color-l, $lightness: -90%)};
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
+  @media (prefers-color-scheme: dark) {
     --color-accent: #{$color-accent-d};
     --color-accent-alpha: #{$bg-color-accent-alpha-d};
     --color-background: #{$bg-color-d};
