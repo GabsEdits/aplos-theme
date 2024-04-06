@@ -267,6 +267,10 @@ footer {
     li {
       text-align: left;
 
+      ul li {
+        list-style-type: disc;
+      }
+
       a {
         display: block;
         text-align: left;
