@@ -17,8 +17,8 @@
         class="post"
       >
         <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
         <p class="date">{{ post.date }}</p>
+        <p>{{ post.description }}</p>
         <div class="tags">
           <span v-if="typeof post.tags === 'string'" :key="post.tags"
             >#{{ post.tags }}</span
@@ -69,7 +69,7 @@ function filterPosts(tag: string) {
 
 .post-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   gap: 10px;
 
   @media screen and (max-width: 600px) {
@@ -82,6 +82,10 @@ function filterPosts(tag: string) {
     padding: 20px;
     border-radius: 8px;
     transition: transform 0.3s ease;
+
+    &:first-child {
+      background-color: var(--color-background-mute);
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -98,14 +102,15 @@ function filterPosts(tag: string) {
     }
 
     p {
-      margin: 0 !important;
-      color: var(--color-text-secondary);
+      margin: 0;
+      color: var(--color-text);
       font-weight: 500;
     }
 
     .date {
-      text-align: right;
+      margin: 5px 0;
       font-size: 0.9rem;
+      color: var(--color-text-secondary);
       font-weight: 600;
       font-feature-settings: "zero", "tnum", "cv03", "cv02";
     }
@@ -142,11 +147,13 @@ function filterPosts(tag: string) {
 }
 
 .tags {
+  text-align: right;
   margin-top: 10px;
 
   span {
+    font-weight: 500;
     margin-right: 5px;
-    color: var(--color-text-secondary);
+    color: var(--color-text-accent);
     background-color: var(--color-background);
     padding: 0.15rem 0.45rem;
     border-radius: 20px;

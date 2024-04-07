@@ -59,7 +59,8 @@ p {
 }
 
 pre {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Geist Mono", monospace;
+  font-weight: 500;
   background-color: var(--color-background-code);
   border-right: var(--color-accent) 0.3125rem solid;
   padding: 0.625rem 1.25rem;
@@ -194,12 +195,13 @@ hr {
 }
 
 code {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Geist Mono", monospace;
+  font-weight: 500;
   background-color: var(--color-background-second);
   border-radius: 0.45rem;
   color: var(--color-accent);
   padding: 0.125rem 0.25rem;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
 kbd {
@@ -207,7 +209,7 @@ kbd {
   border-radius: 0.3125rem;
   border: 0.0625rem solid var(--color-border);
   border-bottom: 0.125rem solid var(--color-border);
-  font-family: "Source Code Pro", monospace;
+  font-family: "Geist Mono", monospace;
   padding: 0.1875rem;
   font-size: 0.875rem;
   cursor: pointer;

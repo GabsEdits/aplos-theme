@@ -3,7 +3,7 @@ import type { Theme } from "vitepress";
 import "./styles/index.scss";
 import "inter-ui/inter.css";
 import "inter-ui/inter-variable.css";
-import "@fontsource/source-code-pro/500.css";
+import "non.geist/mono"
 
 export default {
   Layout: Layout,
